@@ -38,6 +38,7 @@ public class DataScraper {
                 Map.Entry<String, String> currSet = parseData(e.text());
                 data.put(currSet.getKey(), currSet.getValue());
             }
+            System.out.println(ticker + " fetched");
         } catch (IOException e) {
             e.printStackTrace();
         }

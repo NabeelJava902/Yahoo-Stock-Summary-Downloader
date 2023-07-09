@@ -127,6 +127,16 @@ public final class WindowView1 extends JFrame implements WindowView {
     }
 
     @Override
+    public String getPasteFieldText() {
+        return this.pasteField.getText();
+    }
+
+    @Override
+    public String getTargDirDisplayText() {
+        return this.targDirDisplay.getText();
+    }
+
+    @Override
     public void actionPerformed(ActionEvent e) {
         /*
          * Determine which event has occurred that we are being notified of by

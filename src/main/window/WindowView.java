@@ -39,4 +39,16 @@ public interface WindowView extends ActionListener {
      *            true iff copy is allowed
      */
     void updateCopyAllowed(boolean allowed);
+
+    /**
+     * Getter method for the text contained in the paste field
+     * @return [paste field text]
+     */
+    String getPasteFieldText();
+
+    /**
+     * Getter method for the text contained in the target directory display field
+     * @return [target directory display field text]
+     */
+    String getTargDirDisplayText();
 }

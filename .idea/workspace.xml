@@ -4,27 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fdc999e-ddda-4380-a73c-f03ac62f263e" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/YahooFinanceAPI_3_17_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jackson_annotations_2_15_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jsoup_1_16_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/slf4j_api_2_0_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/YahooFinanceAPI-3.17.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/jackson-annotations-2.15.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/jackson-core-2.15.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/jackson-databind-2.15.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/jsoup-1.16.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/slf4j-api-2.0.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/DataPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/DataScraper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/DataPointTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/DataScraperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="5fdc999e-ddda-4380-a73c-f03ac62f263e" name="Changes" comment="Add data classes.&#10;Remove DataRetriever class.&#10;Data retrieval functionality added.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Yahoo Stock Summary Downloader.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Yahoo Stock Summary Downloader.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/DataRetriever.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/window/WindowController1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/window/WindowController1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/window/WindowModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/window/WindowModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/window/WindowModel1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/window/WindowModel1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/window/WindowView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/window/WindowView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/window/WindowView1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/window/WindowView1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/DataScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/DataScraper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/TickerProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/TickerProcessor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +65,20 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.DataScraperTest.scrapeRoutineTest">
+  <component name="RunManager" selected="Application.StockSummaryDownloader">
+    <configuration name="StockSummaryDownloader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.StockSummaryDownloader" />
+      <module name="Yahoo Stock Summary Downloader" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DataPointTest.assignVarsRoutineTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Yahoo Stock Summary Downloader" />
       <extension name="coverage">
@@ -151,31 +151,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StockServiceTest.apiTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Yahoo Stock Summary Downloader" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.StockServiceTest" />
-      <option name="METHOD_NAME" value="apiTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StockSummaryDownloader" />
         <item itemvalue="TestNG.DataScraperTest.scrapeRoutineTest" />
         <item itemvalue="TestNG.DataScraperTest.getDataPointTest" />
         <item itemvalue="TestNG.DataPointTest.assignVarsRoutineTest" />
         <item itemvalue="TestNG.DataScraperTest.retrieveRoutineTest" />
-        <item itemvalue="TestNG.StockServiceTest.apiTest" />
       </list>
     </recent_temporary>
   </component>
@@ -195,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688759609125</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add data classes.&#10;Remove DataRetriever class.&#10;Data retrieval functionality added.">
+      <created>1688872806033</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1688872806033</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,6 +201,22 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Add data classes.&#10;Remove DataRetriever class.&#10;Data retrieval functionality added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add data classes.&#10;Remove DataRetriever class.&#10;Data retrieval functionality added." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.net.MalformedURLException" package="java.net" />
+          <option name="timeStamp" value="10" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/yahoo_downloader_engine/TickerProcessor.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

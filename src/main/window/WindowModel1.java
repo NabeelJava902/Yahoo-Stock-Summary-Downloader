@@ -5,7 +5,7 @@ public class WindowModel1 implements WindowModel{
     /**
      * Model variables.
      */
-    private final String tickerSymbols, targDir;
+    private String tickerSymbols, targDir;
 
     public static final String INITIAL_STRING1 = "Enter your list of ticker symbols";
     public static final String INITIAL_STRING2 = "Enter your target directory";
@@ -28,5 +28,13 @@ public class WindowModel1 implements WindowModel{
         return this.targDir;
     }
 
+    @Override
+    public void setTickerSymbols(String tickerSymbols){
+        this.tickerSymbols = tickerSymbols;
+    }
 
+    @Override
+    public void setTargDir(String targDir){
+        this.targDir = targDir;
+    }
 }

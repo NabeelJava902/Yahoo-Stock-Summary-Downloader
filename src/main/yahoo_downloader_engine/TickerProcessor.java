@@ -1,6 +1,7 @@
 package main.yahoo_downloader_engine;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Ticker Processor Class
@@ -15,7 +16,7 @@ public class TickerProcessor {
     /**
      * Variables for the list of the stock ticker symbols and the target directory to upload data to
      */
-    private String tickerSymbols;
+    private final String tickerSymbols;
     private String targDir;
 
     /**
@@ -35,8 +36,10 @@ public class TickerProcessor {
         processString(this.tickerSymbols, tickerList, new StringBuilder());
         // Now tickerList contains all the individual ticker symbols which can now be iterated through
 
-        for(String ticker : tickerList){
+        HashMap<String, String> data = new HashMap<>();
 
+        for(String ticker : tickerList){
+            DataScraper.scrape(ticker, data);
         }
     }
 
@@ -54,6 +57,7 @@ public class TickerProcessor {
      * @ensures stringList = [collection of all words in the given string]
      */
     public static void processString(String s, ArrayList<String> stringList, StringBuilder currString){
+        s = s.replace("\n", " ");
         if(s.isEmpty()){
             if(!currString.toString().isBlank()){
                 stringList.add(currString.toString().trim());

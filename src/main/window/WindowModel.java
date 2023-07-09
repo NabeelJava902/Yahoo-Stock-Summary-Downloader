@@ -25,4 +25,18 @@ public interface WindowModel {
      * @ensures targDir = this.targDir
      */
     String targDir();
+
+    /**
+     * Setter method for the ticker symbols variable
+     * @param tickerSymbols
+     *          variable to be copied
+     */
+    public void setTickerSymbols(String tickerSymbols);
+
+    /**
+     * Setter method for the target directory variable
+     * @param targDir
+     *          variable to be copied
+     */
+    public void setTargDir(String targDir);
 }

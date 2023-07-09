@@ -33,6 +33,23 @@ public class WindowController1 implements WindowController{
     }
 
     /**
+     * Updates this.view to display this.model, and to allow only operations
+     * that are legal given this.model.
+     *
+     * @param model
+     *      the model
+     * @param view
+     *      the view
+     * @ensures [view has been updated to be consistent with model]
+     */
+    private static void updateModelToView(WindowModel model,
+                                          WindowView view){
+        model.setTickerSymbols(view.getPasteFieldText());
+        model.setTargDir(view.getTargDirDisplayText());
+        updateAllowedButtons(view, model.tickerSymbols());
+    }
+
+    /**
      * Constructor.
      *
      * @param model
@@ -49,8 +66,17 @@ public class WindowController1 implements WindowController{
     @Override
     public void processCopyEvent() {
         // Process the list of ticker symbols
+        updateModelToView(model, view);
+        long startTime = System.nanoTime();
+
         TickerProcessor tp = new TickerProcessor(this.model.tickerSymbols(), this.model.targDir());
         tp.run();
+
+        long endTime = System.nanoTime();
+        long duration = endTime - startTime;
+        double seconds = (double) duration / 1_000_000_000.0;
+
+        System.out.println("All symbols fetched... " + seconds + " seconds");
     }
 
     /**
