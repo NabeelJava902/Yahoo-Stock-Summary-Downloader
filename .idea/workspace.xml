@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fdc999e-ddda-4380-a73c-f03ac62f263e" name="Changes" comment="Fix multiple ticker bug">
-      <change afterPath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/UtilsTest.java" afterDir="false" />
+    <list default="true" id="5fdc999e-ddda-4380-a73c-f03ac62f263e" name="Changes" comment="Add Utils class">
+      <change beforePath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/DataPoint.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/DataScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/DataScraper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/TickerProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/TickerProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/TickerProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TickerProcessorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/DataPointTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +60,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.UtilsTest">
+  <component name="RunManager" selected="Application.StockSummaryDownloader">
     <configuration name="StockSummaryDownloader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.StockSummaryDownloader" />
       <module name="Yahoo Stock Summary Downloader" />
@@ -149,8 +147,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.UtilsTest" />
         <item itemvalue="Application.StockSummaryDownloader" />
+        <item itemvalue="TestNG.UtilsTest" />
         <item itemvalue="TestNG.DataScraperTest.scrapeRoutineTest" />
         <item itemvalue="TestNG.DataScraperTest.getDataPointTest" />
         <item itemvalue="TestNG.DataPointTest.assignVarsRoutineTest" />
@@ -187,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688877002501</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add Utils class">
+      <created>1688878917354</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1688878917354</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,7 +211,8 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Add data classes.&#10;Remove DataRetriever class.&#10;Data retrieval functionality added." />
     <MESSAGE value="Fix multiple ticker bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix multiple ticker bug" />
+    <MESSAGE value="Add Utils class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Utils class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

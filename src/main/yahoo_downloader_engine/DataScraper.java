@@ -45,26 +45,4 @@ public class DataScraper {
             e.printStackTrace();
         }
     }
-
-    /**
-     * This method takes in an Elements object along with a string denoting the desired data point.
-     * The method returns an Element object containing the information that matches with the string
-     * that was passed in to the method.
-     *
-     * @param trs
-     *          the Elements object
-     * @param dataName
-     *          the desired data point within the Elements object
-     * @return targElement
-     * @requires trs.size() > 0 & trs contains dataName
-     */
-    public static Element getDataPoint(Elements trs, String dataName){
-        Element targElement = null;
-        for(Element e : trs){
-            if(e.text().toLowerCase().contains(dataName.toLowerCase())){
-                targElement = e;
-            }
-        }
-        return targElement;
-    }
 }
