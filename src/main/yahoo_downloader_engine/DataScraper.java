@@ -11,6 +11,13 @@ import java.util.Map;
 
 import static main.yahoo_downloader_engine.Utils.parseData;
 
+/**
+ *  The DataScraper class is responsible for scraping relevant data from the Yahoo website for a given stock ticker.
+ *  It provides a method scrape that takes a stock ticker and a HashMap as parameters. The method scrapes data for the
+ *  specified stock ticker and stores the scraped information in the provided HashMap, which is passed by reference.
+ *  This class relies on the Utils.parseData method to extract and format the key-value pairs from the scraped data.
+ *  The scrape method may throw an IOException if an error occurs during the web scraping process.
+ */
 public class DataScraper {
 
     /**
@@ -26,6 +33,8 @@ public class DataScraper {
      *          the stock ticker for which data will be scraped for
      * @param data
      *          the pass-by-reference map to store the date on
+     * @updates data
+     * @ensures data.contents = [collection of all necessary data for each stock ticker provided]
      */
     public static void scrape(String ticker, HashMap<String, String> data){
         String url = "https://finance.yahoo.com/quote/" + ticker + "?p=" + ticker;

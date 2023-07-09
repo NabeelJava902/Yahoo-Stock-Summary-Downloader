@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fdc999e-ddda-4380-a73c-f03ac62f263e" name="Changes" comment="Add Utils class">
-      <change beforePath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/DataPoint.java" beforeDir="false" />
+    <list default="true" id="5fdc999e-ddda-4380-a73c-f03ac62f263e" name="Changes" comment="Cleanup">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/YahooFinanceAPI_3_17_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Yahoo Stock Summary Downloader.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Yahoo Stock Summary Downloader.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/YahooFinanceAPI-3.17.0.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/DataScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/DataScraper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/DataPointTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/TickerProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/TickerProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/Uploader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/Uploader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +50,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "C:/Users/nabee/IdeaProjects/Yahoo Stock Summary Downloader/library/jsoup-1.16.1.jar",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager"
@@ -192,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688878917354</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Cleanup">
+      <created>1688879315045</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1688879315045</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,7 +223,8 @@
     <MESSAGE value="Add data classes.&#10;Remove DataRetriever class.&#10;Data retrieval functionality added." />
     <MESSAGE value="Fix multiple ticker bug" />
     <MESSAGE value="Add Utils class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Utils class" />
+    <MESSAGE value="Cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -2,6 +2,7 @@ package main.yahoo_downloader_engine;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 import static main.yahoo_downloader_engine.Utils.processString;
 
@@ -30,8 +31,9 @@ public class TickerProcessor {
     }
 
     /**
-     * This method passes information to a data retriever object and then uploads the data to a spreadsheet
-     * using an uploader object.
+     * This method reads the ticker symbols and uploads data onto a spreadsheet after scraping the data off of the
+     * yahoo website. run() processes the tickers that were inputted and retrieves a hashmap containing data on the current ticker.
+     * After retrieving the data hashmap, the contents are then stored onto a spreadsheet.
      */
     public void run(){
         ArrayList<String> tickerList = new ArrayList<>();
@@ -42,6 +44,10 @@ public class TickerProcessor {
 
         for(String ticker : tickerList){
             DataScraper.scrape(ticker, data);
+
+            // TODO upload data
+
+            data = new HashMap<>();
         }
     }
 }
