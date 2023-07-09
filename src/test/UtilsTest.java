@@ -1,18 +1,16 @@
 package test;
 
-import main.yahoo_downloader_engine.TickerProcessor;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 
 import static org.testng.Assert.assertEquals;
+import static main.yahoo_downloader_engine.Utils.processString;
 
 /**
- * Test class for the TickerProcessor class.
- *
- * @author Nabeel Arif
+ * Test class for Utils class
  */
-public class TickerProcessorTest {
+public class UtilsTest {
 
     /**
      * Routine test for processString() method.
@@ -23,7 +21,7 @@ public class TickerProcessorTest {
 
         StringBuilder sb = new StringBuilder();
         ArrayList<String> test = new ArrayList<>();
-        TickerProcessor.processString(stringToProcess, test, sb);
+        processString(stringToProcess, test, sb);
 
         ArrayList<String> expected = new ArrayList<>();
         expected.add("Hello");
@@ -40,7 +38,7 @@ public class TickerProcessorTest {
         String stringToProcess = "   ";
 
         ArrayList<String> test = new ArrayList<>();
-        TickerProcessor.processString(stringToProcess, test, new StringBuilder());
+        processString(stringToProcess, test, new StringBuilder());
 
         ArrayList<String> expected = new ArrayList<>();
 

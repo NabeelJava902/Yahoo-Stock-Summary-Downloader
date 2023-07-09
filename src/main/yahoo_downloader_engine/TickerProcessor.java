@@ -3,6 +3,8 @@ package main.yahoo_downloader_engine;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import static main.yahoo_downloader_engine.Utils.processString;
+
 /**
  * Ticker Processor Class
  *
@@ -40,41 +42,6 @@ public class TickerProcessor {
 
         for(String ticker : tickerList){
             DataScraper.scrape(ticker, data);
-        }
-    }
-
-    /**
-     * Utility method to extract each individual word from a string and store them individually into an
-     * array list.
-     *
-     * @param s
-     *          string to process
-     * @param stringList
-     *          pass-by-reference object to store individual strings on
-     * @param currString
-     *          the current string being built
-     * @updates stringList
-     * @ensures stringList = [collection of all words in the given string]
-     */
-    public static void processString(String s, ArrayList<String> stringList, StringBuilder currString){
-        s = s.replace("\n", " ");
-        if(s.isEmpty()){
-            if(!currString.toString().isBlank()){
-                stringList.add(currString.toString().trim());
-            }
-        }else {
-            char c = s.charAt(0);
-
-            if (c != ' ') {
-                currString.append(c);
-            } else {
-                if(!currString.toString().isBlank()){
-                    stringList.add(currString.toString().trim());
-                }
-                currString = new StringBuilder();
-            }
-
-            processString(s.substring(1), stringList, currString);
         }
     }
 }
