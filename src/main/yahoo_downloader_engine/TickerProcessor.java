@@ -41,12 +41,13 @@ public class TickerProcessor {
         // Now tickerList contains all the individual ticker symbols which can now be iterated through
 
         HashMap<String, String> data = new HashMap<>();
-
+        int index = 0;
         for(String ticker : tickerList){
             DataScraper.scrape(ticker, data);
 
-            // TODO upload data
-
+            Uploader.upload(ticker, data, index);
+            
+            index++;
             data = new HashMap<>();
         }
     }

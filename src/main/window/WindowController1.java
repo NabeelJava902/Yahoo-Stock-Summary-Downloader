@@ -3,6 +3,8 @@ package main.window;
 import com.google.common.base.Ticker;
 import main.yahoo_downloader_engine.TickerProcessor;
 
+import java.awt.*;
+
 public class WindowController1 implements WindowController{
 
     /**

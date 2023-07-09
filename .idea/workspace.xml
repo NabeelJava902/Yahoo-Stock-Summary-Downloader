@@ -4,14 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fdc999e-ddda-4380-a73c-f03ac62f263e" name="Changes" comment="Cleanup">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/YahooFinanceAPI_3_17_0.xml" beforeDir="false" />
+    <list default="true" id="5fdc999e-ddda-4380-a73c-f03ac62f263e" name="Changes" comment="Update contracts">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/ant_1_10_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/Apache Poi/SparseBitSet-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/Apache Poi/ant-1.10.12.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/Apache Poi/ant-launcher-1.10.12.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/Apache Poi/commons-codec-1.15.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/Apache Poi/commons-collections4-4.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/Apache Poi/commons-compress-1.21.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/Apache Poi/commons-io-2.11.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/Apache Poi/commons-math3-3.6.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/Apache Poi/curvesapi-1.07.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/Apache Poi/log4j-api-2.18.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/Apache Poi/poi-5.2.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/Apache Poi/poi-excelant-5.2.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/Apache Poi/poi-ooxml-5.2.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/Apache Poi/poi-ooxml-lite-5.2.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/Apache Poi/xmlbeans-5.1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/UploaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Yahoo Stock Summary Downloader.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Yahoo Stock Summary Downloader.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/YahooFinanceAPI-3.17.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/DataScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/DataScraper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/TickerProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/TickerProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/Uploader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/Uploader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +65,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/nabee/IdeaProjects/Yahoo Stock Summary Downloader/library/jsoup-1.16.1.jar",
+    "last_opened_file_path": "C:/Users/nabee/IdeaProjects/Yahoo Stock Summary Downloader/library/Apache Poi/xmlbeans-5.1.1.jar",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -78,42 +94,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DataPointTest.assignVarsRoutineTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Yahoo Stock Summary Downloader" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.DataPointTest" />
-      <option name="METHOD_NAME" value="assignVarsRoutineTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DataScraperTest.getDataPointTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Yahoo Stock Summary Downloader" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.DataScraperTest" />
-      <option name="METHOD_NAME" value="getDataPointTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DataScraperTest.scrapeRoutineTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Yahoo Stock Summary Downloader" />
       <extension name="coverage">
@@ -125,6 +105,42 @@
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.DataScraperTest" />
       <option name="METHOD_NAME" value="scrapeRoutineTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UploaderTest.fetchFileTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Yahoo Stock Summary Downloader" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.UploaderTest" />
+      <option name="METHOD_NAME" value="fetchFileTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UploaderTest.uploadTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Yahoo Stock Summary Downloader" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.UploaderTest" />
+      <option name="METHOD_NAME" value="uploadTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -152,10 +168,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.StockSummaryDownloader" />
+        <item itemvalue="TestNG.UploaderTest.uploadTest" />
+        <item itemvalue="TestNG.UploaderTest.fetchFileTest" />
         <item itemvalue="TestNG.UtilsTest" />
         <item itemvalue="TestNG.DataScraperTest.scrapeRoutineTest" />
-        <item itemvalue="TestNG.DataScraperTest.getDataPointTest" />
-        <item itemvalue="TestNG.DataPointTest.assignVarsRoutineTest" />
       </list>
     </recent_temporary>
   </component>
@@ -203,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688879315045</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Update contracts">
+      <created>1688924161323</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1688924161323</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -224,7 +247,8 @@
     <MESSAGE value="Fix multiple ticker bug" />
     <MESSAGE value="Add Utils class" />
     <MESSAGE value="Cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
+    <MESSAGE value="Update contracts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update contracts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

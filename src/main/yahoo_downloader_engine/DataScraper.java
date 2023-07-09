@@ -47,7 +47,7 @@ public class DataScraper {
             Elements trs = document.getElementsByTag("tr");
             for(Element e : trs){
                 Map.Entry<String, String> currSet = parseData(e.text());
-                data.put(currSet.getKey(), currSet.getValue());
+                data.put(currSet.getKey().trim(), currSet.getValue().trim());
             }
             System.out.println(ticker + " fetched");
         } catch (IOException e) {

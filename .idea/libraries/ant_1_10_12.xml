@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="ant-1.10.12">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/library/Apache Poi/ant-1.10.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/Apache Poi/ant-launcher-1.10.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/Apache Poi/commons-codec-1.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/Apache Poi/commons-collections4-4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/Apache Poi/commons-compress-1.21.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/Apache Poi/commons-io-2.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/Apache Poi/commons-math3-3.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/Apache Poi/curvesapi-1.07.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/Apache Poi/log4j-api-2.18.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/Apache Poi/poi-5.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/Apache Poi/poi-excelant-5.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/Apache Poi/poi-ooxml-5.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/Apache Poi/poi-ooxml-lite-5.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/Apache Poi/SparseBitSet-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/Apache Poi/xmlbeans-5.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
