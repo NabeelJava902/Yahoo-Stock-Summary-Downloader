@@ -3,7 +3,7 @@ package main.yahoo_downloader_engine;
 import java.util.ArrayList;
 
 /**
- * Ticker Processor Object
+ * Ticker Processor Class
  *
  * @author Nabeel Arif
  *
