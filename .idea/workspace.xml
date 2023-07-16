@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fdc999e-ddda-4380-a73c-f03ac62f263e" name="Changes" comment="Spreadsheet format fix">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Yahoo_Stock_Summary_Downloader_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/window/WindowView1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/window/WindowView1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/Uploader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/Uploader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/Utils.java" afterDir="false" />
-    </list>
+    <list default="true" id="5fdc999e-ddda-4380-a73c-f03ac62f263e" name="Changes" comment="Add loading bar" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -240,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689492535038</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add loading bar">
+      <created>1689532898725</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1689532898725</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -266,7 +263,8 @@
     <MESSAGE value="Fix new sheet bug&#10;Add more documentation" />
     <MESSAGE value="Bug fixes" />
     <MESSAGE value="Spreadsheet format fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Spreadsheet format fix" />
+    <MESSAGE value="Add loading bar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add loading bar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

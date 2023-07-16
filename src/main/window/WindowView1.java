@@ -21,17 +21,6 @@ public final class WindowView1 extends JFrame implements WindowView {
     private WindowController controller;
 
     /**
-     *
-     * State of user interaction: last event "seen".
-     */
-    private enum State {SAW_COPY, SAW_FILE, SAW_NOTHING}
-
-    /**
-     * State variable to keep track of which event happened last.
-     */
-    private State currentState = State.SAW_NOTHING;
-
-    /**
      * Text areas.
      */
     private final JTextArea pasteField;
@@ -47,7 +36,6 @@ public final class WindowView1 extends JFrame implements WindowView {
      * Loading popup objects
      */
     private static JDialog dialog;
-    private static JProgressBar progressBar;
 
     /**
      * Useful constants.
@@ -161,7 +149,6 @@ public final class WindowView1 extends JFrame implements WindowView {
             processCopyEvent();
         }else if(source == this.bFile){
             this.controller.processFileChooseEvent();
-            this.currentState = State.SAW_FILE;
         }
     }
 
@@ -179,7 +166,6 @@ public final class WindowView1 extends JFrame implements WindowView {
             protected Void doInBackground() {
                 SwingUtilities.invokeLater(WindowView1::showLoadingScreen);
                 controller.processCopyEvent();
-                currentState = WindowView1.State.SAW_COPY;
                 return null;
             }
 
@@ -205,7 +191,7 @@ public final class WindowView1 extends JFrame implements WindowView {
         dialog.setLocationRelativeTo(null);
 
         // Create the progress bar
-        progressBar = new JProgressBar();
+        JProgressBar progressBar = new JProgressBar();
         progressBar.setIndeterminate(true);
 
         // Add the progress bar to the dialog
@@ -232,6 +218,9 @@ public final class WindowView1 extends JFrame implements WindowView {
         JOptionPane.showMessageDialog(null, "Done", null, JOptionPane.INFORMATION_MESSAGE);
     }
 
+    /**
+     * Document Listener class for the main JTextArea.
+     */
     class MyDocListener implements DocumentListener{
 
         @Override
