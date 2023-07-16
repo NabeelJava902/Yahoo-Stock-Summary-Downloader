@@ -2,7 +2,12 @@
   <artifact type="jar" name="Yahoo Stock Summary Downloader:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/Yahoo_Stock_Summary_Downloader_jar</output-path>
     <root id="archive" name="Yahoo Stock Summary Downloader.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/out/META-INF/MANIFEST.MF" />
+      </element>
       <element id="module-output" name="Yahoo Stock Summary Downloader" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/library/jsoup-1.16.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/library/slf4j-api-2.0.7.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/library/Apache Poi/ant-1.10.12.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/library/Apache Poi/ant-launcher-1.10.12.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/library/Apache Poi/commons-codec-1.15.jar" path-in-jar="/" />
@@ -21,8 +26,6 @@
       <element id="extracted-dir" path="$PROJECT_DIR$/library/jackson-annotations-2.15.2.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/library/jackson-core-2.15.2.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/library/jackson-databind-2.15.2.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/library/slf4j-api-2.0.7.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/library/jsoup-1.16.1.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/testng/testng/7.1.0/testng-7.1.0.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/beust/jcommander/1.72/jcommander-1.72.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/inject/guice/4.1.0/guice-4.1.0-no_aop.jar" path-in-jar="/" />

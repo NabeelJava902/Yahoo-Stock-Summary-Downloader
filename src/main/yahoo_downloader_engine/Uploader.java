@@ -40,8 +40,9 @@ public class Uploader {
      * Ex-Dividend Date May 12, 2023
      * 1y Target Est 188.47
      */
-    private static final String[] DESIRED_DATA = {"Volume", "Avg. Volume", "Market Cap",
-            "Forward Dividend & Yield"};
+    private static final String[] DESIRED_DATA = {"Previous Close", "Open", "Volume", "Avg. Volume", "Market Cap",
+                                                    "Beta (5Y Monthly)", "PE Ratio (TTM)", "Earnings Date",
+                                                    "Forward Dividend & Yield", "Ex-Dividend Date", "1y Target Est"};
 
     // "WR" stands for week range. Since the week range data point has a different format, a
     // boolean variable is needed to create the correct spreadsheet format.

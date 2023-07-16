@@ -50,7 +50,7 @@ public final class WindowView1 extends JFrame implements WindowView {
         this.pasteField = new JTextArea("", TEXT_AREA_HEIGHT, TEXT_AREA_WIDTH);
         targDirDisplay = new JTextArea("", TEXT_AREA_HEIGHT/10, TEXT_AREA_WIDTH);
         this.bCopy = new JButton("Download");
-        this.bFile = new JButton("File");
+        this.bFile = new JButton("Folder");
         //--------------------------------------------------
 
         this.pasteField.setEditable(true);
