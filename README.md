@@ -16,6 +16,7 @@
 Build the project to compile the source code.
 ## Usage
 Run the `StockSummaryDownloader.java` class to initiate the web scraping process.
+
 ![ss](https://github.com/NabeelJava902/Yahoo-Stock-Summary-Downloader/assets/42086597/9ffae62a-dc4d-4d0a-a49b-4dbe2b33cc24)
 1. Paste your list of ticker symbols like AAPL, TSLA, MMM, and TSCO.
 2. Click the 'Folder' button and select your desired directory (Optional: will output Excel in the same folder if folder directory is not chosen).
