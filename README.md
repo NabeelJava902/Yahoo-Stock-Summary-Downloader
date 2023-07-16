@@ -10,10 +10,9 @@
 1. Clone or download the repository to your local machine.
 2. Ensure you have Java Development Kit (JDK) installed on your system.
 3. Import the project into your preferred Java IDE (e.g., IntelliJ, Eclipse).
-## Add the required dependencies:
+## Add the required dependencies (if not already added):
 - Apache POI library: Used for reading and writing Excel files.
 - Jsoup library: Used for web scraping.
-Build the project to compile the source code.
 ## Usage
 Run the `StockSummaryDownloader.java` class to initiate the web scraping process.
 
