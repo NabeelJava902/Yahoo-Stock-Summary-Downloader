@@ -20,12 +20,25 @@ import static main.yahoo_downloader_engine.Utils.parseDouble;
  * formatting the sheet, fetching the file output stream, and retrieving the workbook. It simplifies the
  * process of storing ticker data by handling key operations.
  */
-
 public class Uploader {
 
     /**
      * A string array containing all desired data points, changing the values in this
      * array will change what is written to the Excel sheet
+     * ALL POSSIBLE DATA POINTS (and example values):
+     * Previous Close 191.81
+     * Open 189.84
+     * 52 Week Range 124.17 - 194.48
+     * Volume 44,665,545
+     * Avg. Volume 56,646,141
+     * Market Cap 2.999T
+     * Beta (5Y Monthly) 1.29
+     * PE Ratio (TTM) 31.94
+     * EPS (TTM) 5.97
+     * Earnings Date Aug 03, 2023
+     * Forward Dividend & Yield 0.96 (0.51%)
+     * Ex-Dividend Date May 12, 2023
+     * 1y Target Est 188.47
      */
     private static final String[] DESIRED_DATA = {"Volume", "Avg. Volume", "Market Cap",
             "Forward Dividend & Yield"};

@@ -44,6 +44,12 @@ public final class WindowView1 extends JFrame implements WindowView {
     private final JButton bFile;
 
     /**
+     * Loading popup objects
+     */
+    private static JDialog dialog;
+    private static JProgressBar progressBar;
+
+    /**
      * Useful constants.
      */
     private static final int TEXT_AREA_HEIGHT = 20, TEXT_AREA_WIDTH = 20;
@@ -152,12 +158,78 @@ public final class WindowView1 extends JFrame implements WindowView {
          */
         Object source = e.getSource();
         if(source == this.bCopy){
-            this.controller.processCopyEvent();
-            this.currentState = State.SAW_COPY;
+            processCopyEvent();
         }else if(source == this.bFile){
             this.controller.processFileChooseEvent();
             this.currentState = State.SAW_FILE;
         }
+    }
+
+    /**
+     * Processes a copy event by executing the necessary operations on a background thread
+     * and displaying a loading screen during the process.
+     *
+     * @updates The current state of the WindowView1 object.
+     * @ensures The loading screen is shown before executing the `processCopyEvent()`, and it is hidden
+     *          after the execution completes.
+     */
+    private void processCopyEvent(){
+        SwingWorker<Void, Void> worker = new SwingWorker<>() {
+            @Override
+            protected Void doInBackground() {
+                SwingUtilities.invokeLater(WindowView1::showLoadingScreen);
+                controller.processCopyEvent();
+                currentState = WindowView1.State.SAW_COPY;
+                return null;
+            }
+
+            @Override
+            protected void done() {
+                WindowView1.hideLoadingScreen();
+            }
+        };
+        worker.execute();
+    }
+
+    /**
+     * Displays a modal loading screen with a progress bar or spinner.
+     * The loading screen will block user interaction with other windows.
+     *
+     * @requires The method is called from the event dispatch thread (EDT).
+     * @ensures A loading screen is displayed until hideLoadingScreen() is called.
+     */
+    private static void showLoadingScreen(){
+        dialog = new JDialog((Frame) null, "Loading", true);
+        dialog.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+        dialog.setSize(300, 100);
+        dialog.setLocationRelativeTo(null);
+
+        // Create the progress bar
+        progressBar = new JProgressBar();
+        progressBar.setIndeterminate(true);
+
+        // Add the progress bar to the dialog
+        dialog.getContentPane().setLayout(new BorderLayout());
+        dialog.getContentPane().add(progressBar, BorderLayout.CENTER);
+
+        // Add loading bar header
+        final JLabel header = new JLabel("Please wait, can take about 2 seconds per ticker");
+        dialog.getContentPane().add(header, BorderLayout.NORTH);
+
+        // Show the dialog
+        dialog.setVisible(true);
+    }
+
+    /**
+     * Hides the currently displayed loading screen.
+     *
+     * @requires The method is called from the event dispatch thread (EDT).
+     * @ensures The loading screen is hidden and user interaction with other windows is restored.
+     */
+    private static void hideLoadingScreen() {
+        // Close the dialog
+        dialog.dispose();
+        JOptionPane.showMessageDialog(null, "Done", null, JOptionPane.INFORMATION_MESSAGE);
     }
 
     class MyDocListener implements DocumentListener{

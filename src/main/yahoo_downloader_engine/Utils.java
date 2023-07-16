@@ -113,13 +113,16 @@ public class Utils {
     public static Double parseDouble(String string){
         final double base = 10;
         final double exponent = 12;
-        double d;
-        if(string.contains("T")){
-            d = Double.parseDouble(string.split("T")[0].trim());
-            d *= Math.pow(base, exponent);
-        }else{
-            d = Double.parseDouble(string.replace(",", "").trim());
+        double d = 0;
+        if(string != null){
+            if(string.contains("T")){
+                d = Double.parseDouble(string.split("T")[0].trim());
+                d *= Math.pow(base, exponent);
+            }else{
+                d = Double.parseDouble(string.replace(",", "").trim());
+            }
         }
+        
         return d;
     }
 }
