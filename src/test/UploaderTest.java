@@ -7,7 +7,9 @@ import java.io.IOException;
 import java.util.HashMap;
 
 /**
- * Test class for the Uploader class
+ * Test class for the Uploader class.
+ *
+ * @author Nabeel Arif
  */
 public class UploaderTest {
 

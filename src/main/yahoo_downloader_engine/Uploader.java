@@ -126,6 +126,7 @@ public class Uploader {
         try {
             FileInputStream fis = new FileInputStream(fileName);
             workbook = new XSSFWorkbook(fis);
+            fis.close();
         } catch (IOException e) {
             workbook = new XSSFWorkbook();
         }

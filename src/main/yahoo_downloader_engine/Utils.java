@@ -4,9 +4,10 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.util.ArrayList;
 import java.util.Map;
-import java.util.Objects;
 
 /**
+ * This is a utility class containing all static methods to be accessed and used by other classes.
+ *
  * @author Nabeel Arif
  */
 public class Utils {

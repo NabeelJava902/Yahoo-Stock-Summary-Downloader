@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fdc999e-ddda-4380-a73c-f03ac62f263e" name="Changes" comment="Add excel uploading functionality&#10;Add ApachePoi">
+    <list default="true" id="5fdc999e-ddda-4380-a73c-f03ac62f263e" name="Changes" comment="Fix new sheet bug&#10;Add more documentation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/window/WindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/window/WindowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/window/WindowController1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/window/WindowController1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/window/WindowModel1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/window/WindowModel1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/window/WindowView1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/window/WindowView1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/DataScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/DataScraper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/TickerProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/TickerProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/Uploader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/Uploader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/DataScraperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/DataScraperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/UploaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/UploaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/UtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/UtilsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688930688376</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fix new sheet bug&#10;Add more documentation">
+      <created>1689488826462</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1689488826462</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -242,7 +246,8 @@
     <MESSAGE value="Cleanup" />
     <MESSAGE value="Update contracts" />
     <MESSAGE value="Add excel uploading functionality&#10;Add ApachePoi" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add excel uploading functionality&#10;Add ApachePoi" />
+    <MESSAGE value="Fix new sheet bug&#10;Add more documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix new sheet bug&#10;Add more documentation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

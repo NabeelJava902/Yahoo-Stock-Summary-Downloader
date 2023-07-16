@@ -8,7 +8,9 @@ import static org.testng.Assert.assertEquals;
 import static main.yahoo_downloader_engine.Utils.processString;
 
 /**
- * Test class for Utils class
+ * Test class for Utils class.
+ *
+ * @author Nabeel Arif
  */
 public class UtilsTest {
 
