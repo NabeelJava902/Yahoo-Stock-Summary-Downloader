@@ -21,5 +21,7 @@ Run the `StockSummaryDownloader.java` class to initiate the web scraping process
 2. Click the 'Folder' button and select your desired directory (Optional: will output Excel in the same folder if folder directory is not chosen).
 3. Click the 'Download' button.
 4. Repeat steps 1-3 as many times as you like and close the window when finished.
+## Example output
+![excelss](https://github.com/NabeelJava902/Yahoo-Stock-Summary-Downloader/assets/42086597/23b0608b-1c24-4950-b140-1020be8f3403)
 ## Contributing
 Contributions are welcome! If you encounter any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
