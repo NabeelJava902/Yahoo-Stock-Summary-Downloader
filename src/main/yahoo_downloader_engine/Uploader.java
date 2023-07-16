@@ -10,6 +10,7 @@ import java.io.*;
 import java.util.HashMap;
 
 import static main.yahoo_downloader_engine.Utils.containsSheet;
+import static main.yahoo_downloader_engine.Utils.parseDouble;
 
 /**
  * Uploader class
@@ -26,8 +27,12 @@ public class Uploader {
      * A string array containing all desired data points, changing the values in this
      * array will change what is written to the Excel sheet
      */
-    private static final String[] DESIRED_DATA = {"52 Week Range", "Volume", "Avg. Volume", "Market Cap",
+    private static final String[] DESIRED_DATA = {"Volume", "Avg. Volume", "Market Cap",
             "Forward Dividend & Yield"};
+
+    // "WR" stands for week range. Since the week range data point has a different format, a
+    // boolean variable is needed to create the correct spreadsheet format.
+    private static final boolean WR = true;
 
     // The file path for the Excel sheet
     private static String fileName;
@@ -59,9 +64,23 @@ public class Uploader {
         Cell cell = row.createCell(columnCount++);
         cell.setCellValue(ticker);
 
+        if(WR){
+            String[] value = data.get("52 Week Range").split("-");
+            String low = value[0];
+            String high = value[1];
+            cell = row.createCell(columnCount++);
+            cell.setCellValue(parseDouble(low));
+            cell = row.createCell(columnCount++);
+            cell.setCellValue(parseDouble(high));
+        }
+
         for(String s : DESIRED_DATA){
             cell = row.createCell(columnCount++);
-            cell.setCellValue(data.get(s));
+            try {
+                cell.setCellValue(parseDouble(data.get(s)));
+            }catch (NumberFormatException e){
+                cell.setCellValue(data.get(s));
+            }
         }
 
         try {
@@ -86,6 +105,14 @@ public class Uploader {
         final int firstRow = 0;
         int columnCount = 1;
         Row row = sheet.createRow(firstRow);
+
+        if(WR){
+            Cell cell = row.createCell(columnCount++);
+            cell.setCellValue("52WR Low");
+            cell = row.createCell(columnCount++);
+            cell.setCellValue("52WR High");
+        }
+
         for(String s : DESIRED_DATA){
             Cell cell = row.createCell(columnCount++);
             cell.setCellValue(s);

@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fdc999e-ddda-4380-a73c-f03ac62f263e" name="Changes" comment="Fix new sheet bug&#10;Add more documentation">
+    <list default="true" id="5fdc999e-ddda-4380-a73c-f03ac62f263e" name="Changes" comment="Bug fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/Uploader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/Uploader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/DataScraperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/DataScraperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/UploaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/UploaderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/UtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/UtilsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689488826462</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Bug fixes">
+      <created>1689490083846</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1689490083846</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -247,7 +251,8 @@
     <MESSAGE value="Update contracts" />
     <MESSAGE value="Add excel uploading functionality&#10;Add ApachePoi" />
     <MESSAGE value="Fix new sheet bug&#10;Add more documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix new sheet bug&#10;Add more documentation" />
+    <MESSAGE value="Bug fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

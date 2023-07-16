@@ -99,4 +99,27 @@ public class Utils {
     public static boolean containsSheet(XSSFWorkbook workbook, String sheetName) {
         return workbook.getSheet(sheetName) != null;
     }
+
+
+    /**
+     * Parses a string representation of a number and returns the corresponding double value.
+     * The method handles cases where the string represents a trillion value by multiplying the number by 10^12.
+     * @param string
+     *            The string representation of the number to be parsed.
+     * @return The parsed double value.
+     * @throws NumberFormatException if the string cannot be parsed as a valid double.
+     * @ensures The returned value is the parsed double representation of the input string.
+     */
+    public static Double parseDouble(String string){
+        final double base = 10;
+        final double exponent = 12;
+        double d;
+        if(string.contains("T")){
+            d = Double.parseDouble(string.split("T")[0].trim());
+            d *= Math.pow(base, exponent);
+        }else{
+            d = Double.parseDouble(string.replace(",", "").trim());
+        }
+        return d;
+    }
 }
