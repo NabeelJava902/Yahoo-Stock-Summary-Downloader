@@ -1,5 +1,10 @@
 package main.window;
 
+/**
+ * Model class
+ *
+ * @author Nabeel Arif
+ */
 public class WindowModel1 implements WindowModel{
 
     /**
@@ -8,14 +13,12 @@ public class WindowModel1 implements WindowModel{
     private String tickerSymbols, targDir;
 
     public static final String INITIAL_STRING1 = "Enter your list of ticker symbols";
-    public static final String INITIAL_STRING2 = "Enter your target directory";
 
     /**
      * No argument constructor.
      */
     public WindowModel1() {
         this.tickerSymbols = INITIAL_STRING1;
-        this.targDir = INITIAL_STRING2;
     }
 
     @Override

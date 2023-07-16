@@ -2,7 +2,6 @@ package main.yahoo_downloader_engine;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 import static main.yahoo_downloader_engine.Utils.processString;
 
@@ -20,14 +19,12 @@ public class TickerProcessor {
      * Variables for the list of the stock ticker symbols and the target directory to upload data to
      */
     private final String tickerSymbols;
-    private String targDir;
 
     /**
      * Constructor
      */
-    public TickerProcessor(String tickerSymbols, String targDir){
+    public TickerProcessor(String tickerSymbols){
         this.tickerSymbols = tickerSymbols;
-        this.targDir = targDir;
     }
 
     /**
@@ -43,10 +40,12 @@ public class TickerProcessor {
         HashMap<String, String> data = new HashMap<>();
         int index = 0;
         for(String ticker : tickerList){
+            // Scrape the data
             DataScraper.scrape(ticker, data);
 
+            // Then upload it to Excel sheet
             Uploader.upload(ticker, data, index);
-            
+
             index++;
             data = new HashMap<>();
         }

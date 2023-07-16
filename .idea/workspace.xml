@@ -4,27 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fdc999e-ddda-4380-a73c-f03ac62f263e" name="Changes" comment="Update contracts">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/ant_1_10_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/Apache Poi/SparseBitSet-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/Apache Poi/ant-1.10.12.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/Apache Poi/ant-launcher-1.10.12.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/Apache Poi/commons-codec-1.15.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/Apache Poi/commons-collections4-4.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/Apache Poi/commons-compress-1.21.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/Apache Poi/commons-io-2.11.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/Apache Poi/commons-math3-3.6.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/Apache Poi/curvesapi-1.07.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/Apache Poi/log4j-api-2.18.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/Apache Poi/poi-5.2.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/Apache Poi/poi-excelant-5.2.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/Apache Poi/poi-ooxml-5.2.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/Apache Poi/poi-ooxml-lite-5.2.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/Apache Poi/xmlbeans-5.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/UploaderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="5fdc999e-ddda-4380-a73c-f03ac62f263e" name="Changes" comment="Add excel uploading functionality&#10;Add ApachePoi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Yahoo Stock Summary Downloader.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Yahoo Stock Summary Downloader.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/window/WindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/window/WindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/window/WindowController1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/window/WindowController1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/window/WindowModel1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/window/WindowModel1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/window/WindowView1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/window/WindowView1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/DataScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/DataScraper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/TickerProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/TickerProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/Uploader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/Uploader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/yahoo_downloader_engine/Utils.java" afterDir="false" />
@@ -226,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688924161323</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add excel uploading functionality&#10;Add ApachePoi">
+      <created>1688930688376</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1688930688376</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,7 +241,8 @@
     <MESSAGE value="Add Utils class" />
     <MESSAGE value="Cleanup" />
     <MESSAGE value="Update contracts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update contracts" />
+    <MESSAGE value="Add excel uploading functionality&#10;Add ApachePoi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add excel uploading functionality&#10;Add ApachePoi" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

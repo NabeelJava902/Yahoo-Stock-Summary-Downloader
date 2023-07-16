@@ -1,5 +1,7 @@
 package main.yahoo_downloader_engine;
 
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Objects;
@@ -80,5 +82,20 @@ public class Utils {
 
             processString(s.substring(1), stringList, currString);
         }
+    }
+
+    /**
+     Checks if the given Workbook object contains a sheet with the specified name.
+
+     @param workbook
+                the workbook to check for the sheet
+     @param sheetName
+                the name of the sheet to check for
+     @return true if the workbook contains the sheet, false otherwise
+     @requires workbook != null
+     @requires sheetName != null
+     */
+    public static boolean containsSheet(XSSFWorkbook workbook, String sheetName) {
+        return workbook.getSheet(sheetName) != null;
     }
 }

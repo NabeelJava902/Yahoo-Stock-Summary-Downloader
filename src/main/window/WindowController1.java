@@ -1,21 +1,26 @@
 package main.window;
 
-import com.google.common.base.Ticker;
 import main.yahoo_downloader_engine.TickerProcessor;
 
-import java.awt.*;
+import javax.swing.*;
+import java.io.File;
 
+/**
+ * Controller class
+ *
+ * @author Nabeel Arif
+ */
 public class WindowController1 implements WindowController{
 
     /**
      * Model object.
      */
-    private WindowModel model;
+    private final WindowModel model;
 
     /**
      * View object
      */
-    private WindowView view;
+    private final WindowView view;
 
     /**
      * Updates this.view to display this.model, and to allow only operations
@@ -71,7 +76,7 @@ public class WindowController1 implements WindowController{
         updateModelToView(model, view);
         long startTime = System.nanoTime();
 
-        TickerProcessor tp = new TickerProcessor(this.model.tickerSymbols(), this.model.targDir());
+        TickerProcessor tp = new TickerProcessor(this.model.tickerSymbols());
         tp.run();
 
         long endTime = System.nanoTime();
@@ -79,6 +84,17 @@ public class WindowController1 implements WindowController{
         double seconds = (double) duration / 1_000_000_000.0;
 
         System.out.println("All symbols fetched... " + seconds + " seconds");
+    }
+
+    @Override
+    public void processFileChooseEvent() {
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        fileChooser.showOpenDialog(null);
+        File f = fileChooser.getSelectedFile();
+        String file = f.getAbsolutePath();
+        this.view.updateTargDirDisplay(file);
+        updateModelToView(this.model, this.view);
     }
 
     /**

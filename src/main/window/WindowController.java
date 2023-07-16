@@ -29,4 +29,13 @@ public interface WindowController {
      * [this.view has been updated to match this.model]
      */
     void processCopyEvent();
+
+    /**
+     * Allows user to select a destination file when the file button
+     * clicked.
+     *
+     * @updates this.view.targDirDisplay.text
+     * @ensures this.model.targDir = [users selected directory]
+     */
+    void processFileChooseEvent();
 }

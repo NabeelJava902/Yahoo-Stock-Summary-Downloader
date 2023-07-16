@@ -17,6 +17,8 @@ import static main.yahoo_downloader_engine.Utils.parseData;
  *  specified stock ticker and stores the scraped information in the provided HashMap, which is passed by reference.
  *  This class relies on the Utils.parseData method to extract and format the key-value pairs from the scraped data.
  *  The scrape method may throw an IOException if an error occurs during the web scraping process.
+ *
+ * @author Nabeel Arif
  */
 public class DataScraper {
 

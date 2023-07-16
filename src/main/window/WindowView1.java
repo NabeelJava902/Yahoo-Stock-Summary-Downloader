@@ -24,7 +24,7 @@ public final class WindowView1 extends JFrame implements WindowView {
      *
      * State of user interaction: last event "seen".
      */
-    private enum State {SAW_COPY, SAW_NOTHING}
+    private enum State {SAW_COPY, SAW_FILE, SAW_NOTHING}
 
     /**
      * State variable to keep track of which event happened last.
@@ -34,12 +34,14 @@ public final class WindowView1 extends JFrame implements WindowView {
     /**
      * Text areas.
      */
-    private final JTextArea pasteField, targDirDisplay;
+    private final JTextArea pasteField;
+    public static JTextArea targDirDisplay;
 
     /**
      * Buttons.
      */
     private final JButton bCopy;
+    private final JButton bFile;
 
     /**
      * Useful constants.
@@ -52,25 +54,22 @@ public final class WindowView1 extends JFrame implements WindowView {
         // Set up the GUI widgets --------------------------
 
         this.pasteField = new JTextArea("", TEXT_AREA_HEIGHT, TEXT_AREA_WIDTH);
-        this.targDirDisplay = new JTextArea("", TEXT_AREA_HEIGHT/10, TEXT_AREA_WIDTH);
-        this.bCopy = new JButton("Copy");
+        targDirDisplay = new JTextArea("", TEXT_AREA_HEIGHT/10, TEXT_AREA_WIDTH);
+        this.bCopy = new JButton("Download");
+        this.bFile = new JButton("File");
         //--------------------------------------------------
 
         this.pasteField.setEditable(true);
         this.pasteField.setLineWrap(true);
         this.pasteField.setWrapStyleWord(true);
         pasteField.getDocument().addDocumentListener(new MyDocListener());
-        this.targDirDisplay.setEditable(true);
-        this.targDirDisplay.setLineWrap(true);
-        this.targDirDisplay.setWrapStyleWord(true);
+        targDirDisplay.setEditable(false);
+        targDirDisplay.setLineWrap(true);
+        targDirDisplay.setWrapStyleWord(true);
 
         // Initially, the copy button should not be enabled because the paste field will be empty
         this.bCopy.setEnabled(false);
 
-        /**
-         * Create scroll panes for the paste field in case the list is long enough
-         * where it needs scrolling
-         */
         JScrollPane pasteFieldScroll = new JScrollPane(this.pasteField);
 
         // Create a button panel
@@ -81,7 +80,13 @@ public final class WindowView1 extends JFrame implements WindowView {
         JPanel textPanel = new JPanel();
         textPanel.setLayout(new BoxLayout(textPanel, BoxLayout.PAGE_AXIS));
         textPanel.add(pasteFieldScroll);
-        textPanel.add(targDirDisplay);
+
+        //Create directory choosing bar
+        JPanel dirPanel = new JPanel();
+        dirPanel.setLayout(new FlowLayout());
+        dirPanel.add(targDirDisplay);
+        dirPanel.add(bFile);
+        textPanel.add(dirPanel);
 
         // Organize main main.window
         this.setLayout(new FlowLayout());
@@ -92,10 +97,9 @@ public final class WindowView1 extends JFrame implements WindowView {
 
         // Set up the observers ------------------------------
 
-        /**
-         * Register this class as the observer for all GUI events
-         */
         this.bCopy.addActionListener(this);
+        this.bFile.addActionListener(this);
+
         //----------------------------------------------------
 
         // Set up the main application main.window
@@ -118,7 +122,7 @@ public final class WindowView1 extends JFrame implements WindowView {
 
     @Override
     public void updateTargDirDisplay(String s) {
-        this.targDirDisplay.setText(s);
+        targDirDisplay.setText(s);
     }
 
     @Override
@@ -133,7 +137,7 @@ public final class WindowView1 extends JFrame implements WindowView {
 
     @Override
     public String getTargDirDisplayText() {
-        return this.targDirDisplay.getText();
+        return targDirDisplay.getText();
     }
 
     @Override
@@ -150,6 +154,9 @@ public final class WindowView1 extends JFrame implements WindowView {
         if(source == this.bCopy){
             this.controller.processCopyEvent();
             this.currentState = State.SAW_COPY;
+        }else if(source == this.bFile){
+            this.controller.processFileChooseEvent();
+            this.currentState = State.SAW_FILE;
         }
     }
 
