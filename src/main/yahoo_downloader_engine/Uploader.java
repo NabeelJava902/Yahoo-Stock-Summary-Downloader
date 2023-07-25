@@ -39,14 +39,16 @@ public class Uploader {
      * Forward Dividend & Yield 0.96 (0.51%)
      * Ex-Dividend Date May 12, 2023
      * 1y Target Est 188.47
+     * Post Market Price 192.75
      */
-    public static final String[] DATA_HEADERS = {"Previous Close", "Open", "52 Week Range", "Volume", "Avg. Volume",
-                                                "Market Cap", "Beta (5Y Monthly)", "PE Ratio (TTM)", "EPS (TTM)",
-                                                "Earnings Date", "Forward Dividend & Yield", "Ex-Dividend Date",
+    public static final String[] DATA_HEADERS = {"Post Market Price", "Previous Close", "Open", "52 Week Range", "Volume",
+                                                "Avg. Volume", "Market Cap", "Beta (5Y Monthly)", "PE Ratio (TTM)",
+                                                "EPS (TTM)", "Earnings Date", "Forward Dividend & Yield", "Ex-Dividend Date",
                                                 "1y Target Est"};
     private static final String[] TARGET_DATA = {DATA_HEADERS[0], DATA_HEADERS[1], DATA_HEADERS[3], DATA_HEADERS[4],
                                                 DATA_HEADERS[5], DATA_HEADERS[6], DATA_HEADERS[7], DATA_HEADERS[8],
-                                                DATA_HEADERS[9], DATA_HEADERS[10], DATA_HEADERS[11], DATA_HEADERS[12],};
+                                                DATA_HEADERS[9], DATA_HEADERS[10], DATA_HEADERS[11], DATA_HEADERS[12],
+                                                DATA_HEADERS[13]};
 
     // "WR" stands for week range. Since the week range data point has a different format, a
     // boolean variable is needed to create the correct spreadsheet format.

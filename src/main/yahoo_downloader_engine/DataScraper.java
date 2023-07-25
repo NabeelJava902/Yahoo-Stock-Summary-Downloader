@@ -45,12 +45,18 @@ public class DataScraper {
         try {
             Document document = Jsoup.connect(url).userAgent(userAgent).get();
 
-            // Scrape specific information from the page
+            // Scrape all table data
             Elements trs = document.getElementsByTag("tr");
+            Elements postMarketPrice = document.getElementsByAttributeValue("data-field", "regularMarketPrice");
             for(Element e : trs){
                 Map.Entry<String, String> currSet = parseData(e.text());
                 data.put(currSet.getKey().trim(), currSet.getValue().trim());
             }
+            // Scrape the post market price data
+            Map.Entry<String, String> postMarketPriceSet = Map.entry("Post Market Price",
+                                                            postMarketPrice.get(postMarketPrice.size()-1).text());
+            data.put(postMarketPriceSet.getKey().trim(), postMarketPriceSet.getValue().trim());
+
             System.out.println(ticker + " fetched");
         } catch (IOException e) {
             e.printStackTrace();
