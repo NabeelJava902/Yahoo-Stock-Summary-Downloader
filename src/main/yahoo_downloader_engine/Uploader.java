@@ -40,9 +40,13 @@ public class Uploader {
      * Ex-Dividend Date May 12, 2023
      * 1y Target Est 188.47
      */
-    private static final String[] DESIRED_DATA = {"Previous Close", "Open", "Volume", "Avg. Volume", "Market Cap",
-                                                    "Beta (5Y Monthly)", "PE Ratio (TTM)", "Earnings Date",
-                                                    "Forward Dividend & Yield", "Ex-Dividend Date", "1y Target Est"};
+    public static final String[] DATA_HEADERS = {"Previous Close", "Open", "52 Week Range", "Volume", "Avg. Volume",
+                                                "Market Cap", "Beta (5Y Monthly)", "PE Ratio (TTM)", "EPS (TTM)",
+                                                "Earnings Date", "Forward Dividend & Yield", "Ex-Dividend Date",
+                                                "1y Target Est"};
+    private static final String[] TARGET_DATA = {DATA_HEADERS[0], DATA_HEADERS[1], DATA_HEADERS[3], DATA_HEADERS[4],
+                                                DATA_HEADERS[5], DATA_HEADERS[6], DATA_HEADERS[7], DATA_HEADERS[8],
+                                                DATA_HEADERS[9], DATA_HEADERS[10], DATA_HEADERS[11], DATA_HEADERS[12],};
 
     // "WR" stands for week range. Since the week range data point has a different format, a
     // boolean variable is needed to create the correct spreadsheet format.
@@ -66,8 +70,7 @@ public class Uploader {
      * @ensures The data is properly uploaded into an Excel file with the specified ticker and tickerCount.
      */
     public static void upload(String ticker, HashMap<String, String> data, int tickerCount){
-
-        XSSFWorkbook workbook = fetchWorkbook();
+        XSSFWorkbook workbook = fetchWorkbook(tickerCount);
 
         XSSFSheet sheet = (containsSheet(workbook, header)) ? workbook.getSheet(header):workbook.createSheet(header);
         formatSheet(sheet);
@@ -88,7 +91,7 @@ public class Uploader {
             cell.setCellValue(parseDouble(high));
         }
 
-        for(String s : DESIRED_DATA){
+        for(String s : TARGET_DATA){
             cell = row.createCell(columnCount++);
             try {
                 cell.setCellValue(parseDouble(data.get(s)));
@@ -127,7 +130,7 @@ public class Uploader {
             cell.setCellValue("52WR High");
         }
 
-        for(String s : DESIRED_DATA){
+        for(String s : TARGET_DATA){
             Cell cell = row.createCell(columnCount++);
             cell.setCellValue(s);
         }
@@ -152,11 +155,13 @@ public class Uploader {
      * Retrieves an existing XSSFWorkbook from the specified file or creates a new one if the file is not found.
      * The file path is obtained from the directory specified in the targDirDisplay field of WindowView1.
      *
+     * @param tickerCount
+     *              This variable is used to know whether the sheet being edited is a new one or not.
      * @return XSSFWorkbook
      *              The retrieved XSSFWorkbook from the existing file or a newly created XSSFWorkbook if the file is not found.
      * @ensures The returned XSSFWorkbook is either an existing workbook from the specified file or a new workbook.
      */
-    public static XSSFWorkbook fetchWorkbook(){
+    public static XSSFWorkbook fetchWorkbook(final int tickerCount){
         XSSFWorkbook workbook;
         final String directory = WindowView1.targDirDisplay.getText();
         if(directory.isBlank() || directory.isEmpty()){
@@ -165,6 +170,13 @@ public class Uploader {
             fileName = WindowView1.targDirDisplay.getText() + "/summary_data.xlsx";
         }
         try {
+            /*
+            * this if statement checks makes sure that the sheet being worked on is new if the current ticker
+            * is the first one from the list.
+            */
+            if(tickerCount == 0){
+                throw new IOException("Forced Exception");
+            }
             FileInputStream fis = new FileInputStream(fileName);
             workbook = new XSSFWorkbook(fis);
             fis.close();
